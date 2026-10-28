@@ -94,6 +94,25 @@ Al recorrer el contenido del curso, se busca desarrollar la capacidad de:
 - Reconocer la importancia de la explicabilidad, la interpretabilidad y el despliegue.
 - Desarrollar un ejercicio inicial de redes neuronales en Python utilizando Google Colab.
 
+## Organización del repositorio
+
+Los materiales de este repositorio se agrupan de la siguiente manera:
+
+```text
+.
+├── README.md
+├── notebooks/
+│   └── ejercicio_practico.ipynb
+├── datos/
+├── modelos/
+└── recursos/
+```
+
+- `notebooks/`: cuadernos con ejemplos y ejercicios.
+- `datos/`: conjuntos de datos utilizados en las prácticas, cuando su distribución esté permitida.
+- `modelos/`: modelos entrenados que se decida conservar.
+- `recursos/`: materiales complementarios y referencias técnicas.
+
 ## Alcance
 
 El programa está orientado a la **introducción y aplicación de modelos iniciales** de redes neuronales artificiales. Incluye fundamentos conceptuales, evaluación, validación y un ejercicio práctico. No especifica un conjunto de datos, una arquitectura particular para la práctica ni resultados numéricos de entrenamiento.
