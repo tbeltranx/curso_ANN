@@ -1,126 +1,99 @@
-# Curso de Redes Neuronales
+# Redes Neuronales Artificiales (ANNs)
 
-## Ejercicio 1. Análisis exploratorio y depuración inicial de datos
+## Descripción
 
-### Descripción
+Curso introductorio y práctico sobre los fundamentos de las **Redes Neuronales Artificiales** (*Artificial Neural Networks*, ANNs) y el flujo de trabajo para desarrollar, entrenar y evaluar modelos iniciales con herramientas de acceso libre.
 
-Este ejercicio introduce la preparación de datos como una etapa fundamental en el desarrollo de modelos de redes neuronales. A partir de un archivo CSV, se examina la estructura del conjunto de datos, se identifica la presencia de valores faltantes y se aplican criterios iniciales para seleccionar registros y variables con información disponible.
+El contenido comprende los fundamentos de las redes neuronales, las métricas y estrategias de validación, el procesamiento de datos y el desarrollo de un ejercicio práctico en Python mediante Google Colab.
 
-El trabajo se realiza en **Google Colab** con **Python**, **Pandas**, **Matplotlib** y **Seaborn**. En esta primera actividad **no se entrena una red neuronal**: se prepara y evalúa la información que podría utilizarse posteriormente en un modelo predictivo.
+## Objetivo general
 
-### Objetivo general
+Introducir y aplicar los fundamentos de las Redes Neuronales Artificiales (ANNs), así como los aspectos básicos de un flujo de trabajo orientado al entrenamiento de modelos iniciales mediante herramientas de acceso libre.
 
-Aplicar técnicas de análisis exploratorio y depuración inicial para evaluar la completitud de un conjunto de datos y obtener un subconjunto adecuado para continuar con su preparación para el aprendizaje automático.
+## Conocimientos previos
 
-### Objetivos específicos
+- Fundamentos de **aprendizaje automático** (*Machine Learning*).
+- Manejo básico o intermedio de **Python**: variables, estructuras de control, funciones, listas y diccionarios.
+- Familiaridad con entornos de trabajo como **Jupyter Notebook** o **Google Colab**.
 
-- Importar un archivo CSV desde Google Drive y examinar su estructura.
-- Identificar la distribución de valores faltantes mediante mapas de calor.
-- Reconocer las 20 variables numéricas con mayor número de observaciones válidas.
-- Seleccionar registros con información disponible de la variable `lignin`.
-- Eliminar columnas que carecen por completo de información en el subconjunto seleccionado.
-- Interpretar las implicaciones del filtrado para el desarrollo posterior de modelos predictivos.
+## Contenido del curso
 
-### Requisitos
+### Módulo 1. Fundamentos de las Redes Neuronales Artificiales (ANNs)
 
-- Cuenta de Google con acceso a Google Colab y Google Drive.
-- Conocimientos básicos de Python y manejo de tablas de datos.
-- Archivo `AD_data.csv` disponible en Google Drive.
-- Bibliotecas `pandas`, `matplotlib` y `seaborn` (habitualmente disponibles en Colab).
+1. Las redes neuronales artificiales dentro de la inteligencia artificial.
+2. Concepto de red neuronal artificial.
+3. Perceptrón multicapa (*Multilayer Perceptron*, MLP).
+4. Arquitecturas de redes neuronales artificiales.
+5. Aprendizaje por retropropagación (*backpropagation*).
+6. Hiperparámetros de las ANNs.
+7. Funciones de activación.
 
-### Archivo de entrada
+### Módulo 2. Métricas, validación y sobreajuste
 
-| Elemento | Descripción |
-|---|---|
-| Archivo | `AD_data.csv` |
-| Formato | CSV |
-| Registros iniciales | 2,062 |
-| Columnas iniciales | 71 |
-| Variable utilizada para el filtrado | `lignin` |
+1. Métricas de desempeño para regresión.
+2. Métricas de desempeño para clasificación.
+3. Problemas comunes de ajuste, incluido el sobreajuste.
+4. Estrategias de validación.
 
-La ruta utilizada en el ejemplo es:
+### Módulo 3. Flujo de trabajo general para el desarrollo de modelos de ANNs
 
-```python
-file_path = '/content/drive/MyDrive/Colab Notebooks/AI book/AD_data.csv'
+1. Adquisición, limpieza y análisis exploratorio de datos.
+2. Ingeniería de variables.
+3. Procesamiento de datos y ajuste de hiperparámetros.
+4. Entrenamiento y validación.
+5. Explicabilidad (*Explainable AI*, XAI) e interpretabilidad.
+6. Despliegue de modelos.
+
+### Módulo 4. Ejercicio práctico en Google Colab
+
+1. Ecosistema de herramientas en Python.
+2. Ejercicio práctico de desarrollo de un modelo de red neuronal artificial.
+
+## Flujo de trabajo de referencia
+
+El curso aborda las siguientes etapas generales para desarrollar un modelo:
+
+```text
+Adquisición de datos
+       ↓
+Limpieza y análisis exploratorio
+       ↓
+Ingeniería y procesamiento de variables
+       ↓
+Configuración del modelo y sus hiperparámetros
+       ↓
+Entrenamiento
+       ↓
+Validación y evaluación del desempeño
+       ↓
+Explicabilidad e interpretabilidad
+       ↓
+Despliegue
 ```
 
-**Nota:** Esta ruta debe ajustarse si el archivo se guarda en otra carpeta.
+> Este esquema sintetiza los temas del módulo 3; no representa un procedimiento único ni implica que todas las etapas se implementen en el ejercicio práctico.
 
-### Metodología
+## Herramientas y entorno de trabajo
 
-#### 1. Importación e inspección
+- **Python:** lenguaje de programación utilizado para el trabajo práctico.
+- **Google Colab:** entorno para desarrollar y ejecutar el ejercicio práctico.
+- **Jupyter Notebook:** entorno alternativo para trabajar con cuadernos de Python.
+- **Herramientas de acceso libre:** recursos para el desarrollo y entrenamiento de modelos iniciales.
 
-Se montará Google Drive, se leerá el archivo CSV con Pandas y se utilizará `df.info()` para examinar el número de registros, las columnas, los tipos de datos y los valores no nulos.
+> El temario no especifica bibliotecas concretas de Python ni versiones de software. Estas podrán documentarse conforme se incorporen los ejercicios al repositorio.
 
-#### 2. Visualización general de valores faltantes
+## Resultados de aprendizaje esperados
 
-Se generará un mapa de calor a partir de `df.isnull()` para identificar la distribución de datos faltantes en el conjunto original.
+Al recorrer el contenido del curso, se busca desarrollar la capacidad de:
 
-#### 3. Selección de variables numéricas con mayor completitud
+- Reconocer los componentes y las arquitecturas básicas de una ANN.
+- Comprender el perceptrón multicapa, la retropropagación, las funciones de activación y los hiperparámetros.
+- Distinguir métricas de evaluación para problemas de regresión y clasificación.
+- Identificar problemas de ajuste y aplicar estrategias de validación.
+- Organizar un flujo de trabajo para preparar datos, entrenar y validar modelos.
+- Reconocer la importancia de la explicabilidad, la interpretabilidad y el despliegue.
+- Desarrollar un ejercicio inicial de redes neuronales en Python utilizando Google Colab.
 
-Se identificarán las columnas numéricas mediante `select_dtypes(include=['number'])`, se contará el número de valores no nulos y se seleccionarán las 20 columnas con mayor disponibilidad. Los resultados se mostrarán en una gráfica de barras y un mapa de calor.
+## Alcance
 
-#### 4. Filtrado por disponibilidad de `lignin`
-
-Se conservarán únicamente los registros que tengan un valor no nulo en `lignin`:
-
-```python
-df_filtered_lignin = df[df['lignin'].notna()]
-```
-
-En los resultados analizados, este paso reduce el conjunto de **2,062 a 417 registros**, conservando las 71 columnas originales.
-
-#### 5. Eliminación de columnas completamente vacías
-
-Se eliminarán las columnas cuyos valores sean todos nulos dentro de los 417 registros seleccionados:
-
-```python
-df_lignin_non_empty_cols = df_filtered_lignin.dropna(axis=1, how='all')
-```
-
-El número de filas permanece constante; el número final de columnas depende de cuántas estén completamente vacías en el subconjunto.
-
-### Resultados de referencia
-
-| Etapa | Registros | Columnas |
-|---|---:|---:|
-| Datos originales | 2,062 | 71 |
-| Filtrado por `lignin` no nulo | 417 | 71 |
-| Eliminación de columnas totalmente nulas | 417 | Por determinar al ejecutar |
-
-El filtrado por `lignin` conserva aproximadamente el **20.22 %** de los registros originales. Esto garantiza que la variable tenga información en todos los registros seleccionados, pero no asegura la completitud de las demás variables.
-
-### Actividades de análisis
-
-Al concluir el ejercicio, se deberá poder responder:
-
-1. ¿Cuáles son las variables numéricas con mayor disponibilidad de información?
-2. ¿Qué patrones de datos faltantes se observan en los mapas de calor?
-3. ¿Cuántos registros se excluyen al exigir un valor disponible de `lignin`?
-4. ¿Cuántas columnas quedan completamente vacías después del filtrado y se eliminan?
-5. ¿Qué riesgos de sesgo o pérdida de representatividad puede introducir la selección de registros?
-6. ¿Qué operaciones adicionales serían necesarias antes de entrenar una red neuronal?
-
-### Relación con el modelado mediante redes neuronales
-
-Las redes neuronales requieren datos de entrada consistentes y una estrategia explícita para tratar los valores faltantes. Este ejercicio constituye una primera etapa de preparación; antes de entrenar un modelo todavía será necesario evaluar la relevancia de las variables, tratar los datos faltantes remanentes, revisar posibles valores atípicos, definir las variables de entrada y la variable objetivo, separar los datos de entrenamiento y evaluación, y aplicar el escalado apropiado sin introducir fugas de información.
-
-La selección de registros con `lignin` disponible **no implica por sí sola** que esta variable deba ser la salida de la red neuronal; esa decisión depende del problema predictivo planteado.
-
-### Entregables sugeridos
-
-- Cuaderno de Google Colab (`.ipynb`) con el código ejecutado.
-- Gráficas de barras y mapas de calor obtenidos.
-- Tabla comparativa de dimensiones antes y después de la depuración.
-- Interpretación breve de los resultados y de las limitaciones del conjunto filtrado.
-
-### Alcance
-
-El ejercicio comprende **carga, inspección, visualización y depuración inicial**. No incluye todavía imputación, normalización, entrenamiento, validación ni evaluación de redes neuronales.
-
----
-
-**Curso:** Redes Neuronales  
-**Ejercicio:** 1  
-**Tema:** Análisis exploratorio y preparación inicial de datos  
-**Entorno:** Python / Google Colab
+El programa está orientado a la **introducción y aplicación de modelos iniciales** de redes neuronales artificiales. Incluye fundamentos conceptuales, evaluación, validación y un ejercicio práctico. No especifica un conjunto de datos, una arquitectura particular para la práctica ni resultados numéricos de entrenamiento.
